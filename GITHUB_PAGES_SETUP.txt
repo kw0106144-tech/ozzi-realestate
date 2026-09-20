@@ -1,0 +1,24 @@
+OZZI Real Estate Egypt — GitHub Pages Ready
+
+رفع الموقع على GitHub Pages:
+
+1) افتح https://github.com وسجل الدخول.
+2) اضغط New لإنشاء Repository جديد.
+3) اسم الـ Repository المقترح: ozzi-realestate
+4) اجعله Public.
+5) افتح الـ Repository ثم Add file → Upload files.
+6) ارفع كل محتويات هذا المجلد، بما فيها index.html وملفات CSS وJS.
+7) اضغط Commit changes.
+8) افتح Settings → Pages.
+9) في Build and deployment اختر:
+   Source: Deploy from a branch
+   Branch: main
+   Folder: / (root)
+10) اضغط Save.
+11) بعد انتهاء النشر سيظهر رابط الموقع، غالبًا بالشكل:
+   https://USERNAME.github.io/ozzi-realestate/
+
+مهم:
+- لا ترفع ملف ZIP داخل Repository؛ ارفع الملفات والمجلدات الموجودة بداخله.
+- وجود index.html في جذر الـ Repository ضروري.
+- ملف .nojekyll موجود بالفعل لتشغيل الموقع كملفات Static مباشرة.

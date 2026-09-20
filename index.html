@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OZZI Real Estate Egypt</title>
+  <meta name="description" content="OZZI Real Estate Egypt - بيع، شراء، إيجار، تطوير عقاري ومواد بناء." />
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="#">
+      <span class="logo-mark"></span>
+      <span class="logo-text">OZZI<small>REAL ESTATE EGYPT</small></span>
+    </a>
+
+    <button class="menu-btn" id="menuBtn" aria-label="فتح القائمة">☰</button>
+
+    <nav class="nav-links" id="navLinks">
+      <a class="active" href="#home">الرئيسية</a>
+      <a href="#properties">للبيع</a>
+      <a href="#rent">للإيجار</a>
+      <a href="#development">التطوير العقاري</a>
+      <a href="#materials">مواد البناء</a>
+      <a href="#why">من نحن</a>
+      <a href="#contact">تواصل معنا</a>
+    </nav>
+
+    <button class="nav-cta" onclick="contactOZZI()">تواصل مع OZZI ↗</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <span class="eyebrow">OZZI Real Estate Egypt</span>
+        <h1>ابحث عن <span>مكانك القادم</span> مع OZZI</h1>
+        <p>بيع، شراء، إيجار، تطوير عقاري ومواد بناء — كل ما تحتاجه في مكان واحد.</p>
+      </div>
+    </div>
+
+    <div class="hero-search">
+      <div class="search-tabs">
+        <button class="search-tab active" data-mode="بيع">بيع</button>
+        <button class="search-tab" data-mode="إيجار">إيجار</button>
+        <button class="search-tab" data-mode="تطوير عقاري">تطوير عقاري</button>
+      </div>
+      <form class="search-grid" id="searchForm">
+        <div class="field">
+          <label>نوع العقار</label>
+          <select>
+            <option>شقة</option><option>فيلا</option><option>أرض</option>
+            <option>محل</option><option>مكتب</option><option>شاليه</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>الموقع</label>
+          <input type="text" placeholder="المحافظة / المنطقة" />
+        </div>
+        <div class="field">
+          <label>السعر</label>
+          <input type="text" placeholder="من — إلى" />
+        </div>
+        <div class="field">
+          <label>المساحة</label>
+          <input type="text" placeholder="م²" />
+        </div>
+        <button class="btn search-btn" type="submit">بحث 🔍</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="section services">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">خدمات OZZI</h2>
+          <div class="gold-line"></div>
+          <p class="section-subtitle">كل ما تحتاجه في عالم العقارات والبناء</p>
+        </div>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card">
+          <div class="service-image" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80')"></div>
+          <div class="service-body"><div class="icon">🏠</div><h3>عقارات للبيع</h3><p>اختيارات متنوعة من العقارات المناسبة لاحتياجاتك.</p><a class="text-link" href="#properties">اكتشف العقارات ←</a></div>
+        </article>
+        <article class="service-card">
+          <div class="service-image" style="background-image:url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80')"></div>
+          <div class="service-body"><div class="icon">🔑</div><h3>عقارات للإيجار</h3><p>شقق، فلل، مكاتب ومحلات بخيارات إيجار مرنة.</p><a class="text-link" href="#rent">اكتشف الإيجارات ←</a></div>
+        </article>
+        <article class="service-card">
+          <div class="service-image" style="background-image:url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=900&q=80')"></div>
+          <div class="service-body"><div class="icon">🏗️</div><h3>التطوير العقاري</h3><p>مشروعات مختارة بعناية في مواقع استراتيجية.</p><a class="text-link" href="#development">استكشف المشروعات ←</a></div>
+        </article>
+        <article class="service-card">
+          <div class="service-image" style="background-image:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80')"></div>
+          <div class="service-body"><div class="icon">🧱</div><h3>مواد البناء</h3><p>كل مستلزمات البناء والتشطيب في مكان واحد.</p><a class="text-link" href="#materials">تصفح المنتجات ←</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section properties" id="properties">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">اختيارات OZZI المميزة</h2>
+          <div class="gold-line"></div>
+          <p class="section-subtitle">عقارات مختارة بعناية بواسطة فريق OZZI</p>
+        </div>
+        <a class="text-link" href="#">عرض جميع العقارات ←</a>
+      </div>
+
+      <div class="property-grid">
+        <article class="property-card">
+          <div class="property-img" style="background-image:url('https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1000&q=80')"><span class="badge">للبيع</span><button class="heart">♡</button></div>
+          <div class="property-body"><span class="property-type">فيلا مستقلة</span><h3 class="property-title">فيلا فاخرة بإطلالة مميزة</h3><div class="location">📍 الشيخ زايد - الجيزة</div><div class="meta"><span>🛏 5 غرف</span><span>🛁 4 حمامات</span><span>▣ 450 م²</span></div><div class="price">12,500,000 <small>جنيه</small></div><button class="btn details" onclick="showToast('تم اختيار العقار')">التفاصيل</button></div>
+        </article>
+        <article class="property-card">
+          <div class="property-img" style="background-image:url('https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1000&q=80')"><span class="badge">للبيع</span><button class="heart">♡</button></div>
+          <div class="property-body"><span class="property-type">شقة سكنية</span><h3 class="property-title">شقة حديثة بتشطيب فاخر</h3><div class="location">📍 التجمع الخامس - القاهرة الجديدة</div><div class="meta"><span>🛏 3 غرف</span><span>🛁 3 حمامات</span><span>▣ 180 م²</span></div><div class="price">3,200,000 <small>جنيه</small></div><button class="btn details" onclick="showToast('تم اختيار العقار')">التفاصيل</button></div>
+        </article>
+        <article class="property-card">
+          <div class="property-img" style="background-image:url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=80')"><span class="badge">للإيجار</span><button class="heart">♡</button></div>
+          <div class="property-body"><span class="property-type">شقة للإيجار</span><h3 class="property-title">شقة مفروشة بإطلالة رائعة</h3><div class="location">📍 سموحة - الإسكندرية</div><div class="meta"><span>🛏 2 غرف</span><span>🛁 2 حمام</span><span>▣ 140 م²</span></div><div class="price">25,000 <small>جنيه / شهرياً</small></div><button class="btn details" onclick="showToast('تم اختيار العقار')">التفاصيل</button></div>
+        </article>
+        <article class="property-card">
+          <div class="property-img" style="background-image:url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=80')"><span class="badge">للإيجار</span><button class="heart">♡</button></div>
+          <div class="property-body"><span class="property-type">مكتب إداري</span><h3 class="property-title">مكتب إداري في موقع مميز</h3><div class="location">📍 الشيخ زايد - الجيزة</div><div class="meta"><span>🛏 3 غرف</span><span>🛁 2 حمام</span><span>▣ 120 م²</span></div><div class="price">45,000 <small>جنيه / شهرياً</small></div><button class="btn details" onclick="showToast('تم اختيار العقار')">التفاصيل</button></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="rent">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">أحدث العقارات</h2>
+          <div class="gold-line"></div>
+          <p class="section-subtitle">آخر العقارات المضافة بواسطة فريق OZZI</p>
+        </div>
+        <a class="text-link" href="#">عرض جميع العقارات ←</a>
+      </div>
+      <div class="latest-grid">
+        <div class="latest-card"><div class="latest-img" style="background-image:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=80')"></div><div class="latest-body"><strong>شقة فاخرة</strong><span>التجمع الخامس • للبيع</span></div></div>
+        <div class="latest-card"><div class="latest-img" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=700&q=80')"></div><div class="latest-body"><strong>فيلا</strong><span>الشيخ زايد • للبيع</span></div></div>
+        <div class="latest-card"><div class="latest-img" style="background-image:url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=700&q=80')"></div><div class="latest-body"><strong>مكتب إداري</strong><span>المعادي • للإيجار</span></div></div>
+        <div class="latest-card"><div class="latest-img" style="background-image:url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=700&q=80')"></div><div class="latest-body"><strong>شقة فاخرة</strong><span>الإسكندرية • للإيجار</span></div></div>
+        <div class="latest-card"><div class="latest-img" style="background-image:url('https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=700&q=80')"></div><div class="latest-body"><strong>محل تجاري</strong><span>مدينة نصر • للبيع</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="development">
+    <div class="container">
+      <div class="dev-banner">
+        <div class="dev-content">
+          <h2>اكتشف مشروعاتنا العقارية</h2>
+          <p>مشروعات مختارة بعناية، بمواقع مميزة ووحدات تناسب احتياجاتك وخططك الاستثمارية.</p>
+          <button class="btn btn-gold" onclick="showToast('سيتم عرض المشروعات قريباً')">استكشف المشروعات ←</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section materials" id="materials">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">كل ما تحتاجه للبناء في مكان واحد</h2>
+          <div class="gold-line"></div>
+          <p class="section-subtitle">منتجات ومواد بناء مختارة لمشروعاتك</p>
+        </div>
+        <button class="btn btn-dark" style="background:var(--green);color:#fff" onclick="showToast('قسم مواد البناء جاهز للتصفح')">تصفح مواد البناء ←</button>
+      </div>
+
+      <div class="material-grid">
+        <div class="material-card"><div class="material-img" style="background-image:url('https://images.unsplash.com/photo-1531835551805-16d864c8d311?auto=format&fit=crop&w=700&q=80')"></div><strong>حديد</strong></div>
+        <div class="material-card"><div class="material-img" style="background-image:url('https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&w=700&q=80')"></div><strong>أسمنت</strong></div>
+        <div class="material-card"><div class="material-img" style="background-image:url('https://images.unsplash.com/photo-1590253230532-a67f6bc61a8b?auto=format&fit=crop&w=700&q=80')"></div><strong>طوب</strong></div>
+        <div class="material-card"><div class="material-img" style="background-image:url('https://images.unsplash.com/photo-1582582429416-7a5a1c4e0c6d?auto=format&fit=crop&w=700&q=80')"></div><strong>رمل وزلط</strong></div>
+        <div class="material-card"><div class="material-img" style="background-image:url('https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=700&q=80')"></div><strong>تشطيبات</strong></div>
+        <div class="material-card"><div class="material-img" style="background-image:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=700&q=80')"></div><strong>مستلزمات البناء</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="why">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">لماذا OZZI؟</h2>
+          <div class="gold-line"></div>
+          <p class="section-subtitle">حلول عقارية وإنشائية متكاملة من مكان واحد</p>
+        </div>
+      </div>
+      <div class="why-grid">
+        <div class="why-card"><div class="why-icon">🔎</div><h3>خيارات عقارية متنوعة</h3><p>اختيارات تناسب احتياجات مختلفة</p></div>
+        <div class="why-card"><div class="why-icon">🤝</div><h3>متابعة من فريق OZZI</h3><p>دعم مستمر في كل خطوة</p></div>
+        <div class="why-card"><div class="why-icon">📍</div><h3>عقارات ومشروعات مختارة</h3><p>جودة ومواقع مميزة</p></div>
+        <div class="why-card"><div class="why-icon">⚡</div><h3>تواصل سريع</h3><p>نصل إليك بأسرع وقت</p></div>
+        <div class="why-card"><div class="why-icon">🏗️</div><h3>خدمات متكاملة</h3><p>عقار وتطوير ومواد بناء</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="cta">
+        <div>
+          <h2>مستعد تبدأ خطوتك القادمة؟</h2>
+          <p>دع OZZI تساعدك في الوصول للعقار أو الخدمة المناسبة.</p>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn btn-gold" href="#properties">تصفح العقارات</a>
+          <button class="btn" style="background:#fff;color:var(--green)" onclick="contactOZZI()">تواصل معنا</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-main">
+    <div>
+      <div class="footer-logo">OZZI</div>
+      <p style="margin-top:8px">REAL ESTATE EGYPT</p>
+      <p style="margin-top:15px">بيع • شراء • إيجار • تطوير عقاري • مواد بناء</p>
+    </div>
+    <div class="footer-col"><h4>روابط سريعة</h4><a href="#home">الرئيسية</a><a href="#properties">العقارات</a><a href="#development">التطوير العقاري</a><a href="#materials">مواد البناء</a></div>
+    <div class="footer-col"><h4>خدماتنا</h4><a href="#properties">بيع العقارات</a><a href="#rent">إيجار العقارات</a><a href="#development">المشروعات</a><a href="#materials">مواد البناء</a></div>
+    <div class="footer-col"><h4>تواصل معنا</h4><a href="tel:+201015949282">📞 01015949282</a><a href="https://wa.me/201015949282" target="_blank">💬 واتساب</a><a href="#contact">📍 مصر</a></div>
+  </div>
+  <div class="footer-bottom">© 2026 OZZI Real Estate Egypt — جميع الحقوق محفوظة</div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
