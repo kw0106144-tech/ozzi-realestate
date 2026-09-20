@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>العقارات | OZZI Real Estate Egypt</title>
+  <meta name="description" content="تصفح عقارات OZZI للبيع والإيجار في مصر.">
+  <link rel="stylesheet" href="properties.css">
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="index.html">
+      <span class="logo-mark"></span>
+      <span class="logo-text">OZZI<small>REAL ESTATE EGYPT</small></span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-label="فتح القائمة">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">الرئيسية</a>
+      <a class="active" href="properties.html">العقارات</a>
+      <a href="#rent">للإيجار</a>
+      <a href="index.html#development">التطوير العقاري</a>
+      <a href="index.html#materials">مواد البناء</a>
+      <a href="index.html#why">من نحن</a>
+      <a href="index.html#contact">تواصل معنا</a>
+    </nav>
+    <button class="nav-cta" id="contactBtn">تواصل مع OZZI ↗</button>
+  </div>
+</header>
+
+<main>
+  <section class="properties-hero">
+    <div class="container">
+      <span class="eyebrow">OZZI Real Estate Egypt</span>
+      <h1>اكتشف <span>العقار المناسب</span> لك</h1>
+      <p>اختيارات متنوعة للبيع والإيجار في مواقع مميزة داخل مصر.</p>
+    </div>
+  </section>
+
+  <section class="listing-section">
+    <div class="container">
+      <div class="filter-box">
+        <div class="filter-top">
+          <div>
+            <h2>ابحث عن عقارك</h2>
+            <p>استخدم الفلاتر للوصول للنتيجة المناسبة بسرعة.</p>
+          </div>
+          <button class="reset-btn" id="resetBtn">إعادة ضبط ↻</button>
+        </div>
+
+        <div class="filters">
+          <label class="filter-field">
+            <span>نوع العرض</span>
+            <select id="purpose">
+              <option value="all">الكل</option>
+              <option value="sale">للبيع</option>
+              <option value="rent">للإيجار</option>
+            </select>
+          </label>
+
+          <label class="filter-field">
+            <span>نوع العقار</span>
+            <select id="type">
+              <option value="all">كل الأنواع</option>
+              <option value="apartment">شقة</option>
+              <option value="villa">فيلا</option>
+              <option value="office">مكتب</option>
+              <option value="shop">محل</option>
+              <option value="chalet">شاليه</option>
+            </select>
+          </label>
+
+          <label class="filter-field">
+            <span>الموقع</span>
+            <select id="location">
+              <option value="all">كل المواقع</option>
+              <option value="new-cairo">التجمع الخامس</option>
+              <option value="sheikh-zayed">الشيخ زايد</option>
+              <option value="maadi">المعادي</option>
+              <option value="alexandria">الإسكندرية</option>
+              <option value="north-coast">الساحل الشمالي</option>
+            </select>
+          </label>
+
+          <label class="filter-field">
+            <span>الحد الأقصى للسعر</span>
+            <select id="price">
+              <option value="all">بدون حد</option>
+              <option value="3000000">3 مليون</option>
+              <option value="5000000">5 مليون</option>
+              <option value="10000000">10 مليون</option>
+              <option value="20000000">20 مليون</option>
+            </select>
+          </label>
+
+          <label class="filter-field search-field">
+            <span>بحث</span>
+            <input id="keyword" type="search" placeholder="اسم العقار أو المنطقة...">
+          </label>
+        </div>
+      </div>
+
+      <div class="results-head">
+        <div>
+          <span class="result-label">العقارات المتاحة</span>
+          <h2>اختر مكانك القادم</h2>
+        </div>
+        <select id="sort" class="sort-select">
+          <option value="default">ترتيب افتراضي</option>
+          <option value="low">السعر: من الأقل للأعلى</option>
+          <option value="high">السعر: من الأعلى للأقل</option>
+        </select>
+      </div>
+
+      <div class="property-grid" id="propertyGrid"></div>
+      <div class="empty-state" id="emptyState">
+        <div>🏠</div>
+        <h3>لم نجد عقارات مطابقة</h3>
+        <p>جرّب تغيير الفلاتر أو البحث عن منطقة أخرى.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-main">
+    <div>
+      <div class="footer-logo">OZZI</div>
+      <p style="margin-top:8px">REAL ESTATE EGYPT</p>
+      <p style="margin-top:15px">بيع • شراء • إيجار • تطوير عقاري • مواد بناء</p>
+    </div>
+    <div class="footer-col">
+      <h4>روابط سريعة</h4>
+      <a href="index.html">الرئيسية</a>
+      <a href="properties.html">العقارات</a>
+      <a href="index.html#development">التطوير العقاري</a>
+      <a href="index.html#materials">مواد البناء</a>
+    </div>
+    <div class="footer-col">
+      <h4>خدماتنا</h4>
+      <a href="properties.html?purpose=sale">بيع العقارات</a>
+      <a href="properties.html?purpose=rent">إيجار العقارات</a>
+      <a href="index.html#development">المشروعات</a>
+      <a href="index.html#materials">مواد البناء</a>
+    </div>
+    <div class="footer-col">
+      <h4>تواصل معنا</h4>
+      <a href="tel:+201015949282">📞 01015949282</a>
+      <a href="https://wa.me/201015949282" target="_blank">💬 واتساب</a>
+      <a href="index.html#contact">📍 مصر</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 OZZI Real Estate Egypt — جميع الحقوق محفوظة</div>
+</footer>
+
+<div class="toast" id="toast"></div>
+<script src="properties.js"></script>
+</body>
+</html>

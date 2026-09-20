@@ -1,3 +1,21 @@
+const propertyData = {
+  1:{type:"فيلا مستقلة",title:"فيلا فاخرة بإطلالة مميزة",location:"الشيخ زايد - الجيزة",price:"12,500,000"},
+  2:{type:"شقة سكنية",title:"شقة حديثة بتشطيب فاخر",location:"التجمع الخامس - القاهرة الجديدة",price:"3,200,000"},
+  3:{type:"شقة للإيجار",title:"شقة مفروشة بإطلالة رائعة",location:"سموحة - الإسكندرية",price:"25,000"},
+  4:{type:"مكتب إداري",title:"مكتب إداري في موقع مميز",location:"الشيخ زايد - الجيزة",price:"45,000"},
+  5:{type:"شقة سكنية",title:"شقة راقية بالقرب من الخدمات",location:"المعادي - القاهرة",price:"4,800,000"},
+  6:{type:"شاليه",title:"شاليه بإطلالة بحرية",location:"الساحل الشمالي",price:"7,200,000"},
+  7:{type:"محل تجاري",title:"محل تجاري على شارع رئيسي",location:"التجمع الخامس - القاهرة الجديدة",price:"60,000"},
+  8:{type:"فيلا مستقلة",title:"فيلا عصرية داخل كمبوند",location:"القاهرة الجديدة",price:"18,500,000"}
+};
+
+const detailId = Number(new URLSearchParams(window.location.search).get("id") || 1);
+const selectedProperty = propertyData[detailId] || propertyData[1];
+document.getElementById("detailType").textContent = selectedProperty.type;
+document.getElementById("detailTitle").textContent = selectedProperty.title;
+document.getElementById("detailLocation").textContent = "📍 " + selectedProperty.location;
+document.getElementById("detailPrice").innerHTML = `${selectedProperty.price} <small>جنيه</small>`;
+
 const photos = [
   "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1400&q=85",
   "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
