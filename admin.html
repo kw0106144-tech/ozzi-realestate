@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OZZI Admin</title><link rel="stylesheet" href="admin.css"></head><body>
+<div id="loginView" class="login-wrap"><div class="login-card">
+<div class="brand">OZZI<small>REAL ESTATE EGYPT</small></div><h1 style="margin-top:22px">لوحة تحكم OZZI</h1><p class="muted">سجل دخول المدير لإدارة العقارات ومواد البناء.</p>
+<form id="loginForm"><div class="field"><label>البريد الإلكتروني</label><input id="loginEmail" type="email" required></div>
+<div class="field"><label>كلمة المرور</label><input id="loginPassword" type="password" required></div>
+<button class="btn primary full">دخول</button></form><div id="msg" class="msg"></div></div></div>
+
+<div id="app" class="app">
+<aside class="sidebar"><div class="side-brand">OZZI<small>ADMIN PANEL</small></div>
+<button class="nav-item active" data-view="dashboard">📊 لوحة التحكم</button>
+<button class="nav-item" data-view="properties">🏠 العقارات</button>
+<button class="nav-item" data-view="materials">🧱 مواد البناء</button>
+<button class="nav-item" data-view="inquiries">📋 الطلبات</button>
+<button id="logout" class="logout">تسجيل الخروج</button></aside>
+<main class="main">
+<div class="topbar"><div><h1>لوحة تحكم OZZI</h1><p class="muted">مرحباً، <span id="adminEmail"></span></p></div><a class="btn primary" href="index.html">عرض الموقع</a></div>
+<div id="msg" class="msg"></div>
+<section id="dashboard" class="view">
+<div class="stats"><div class="stat"><span>العقارات</span><b id="statProps">0</b></div><div class="stat"><span>مواد البناء</span><b id="statMats">0</b></div><div class="stat"><span>الطلبات</span><b id="statInq">0</b></div></div>
+<div class="panel"><h2>إدارة OZZI</h2><p class="muted" style="margin-top:8px">من هنا هنقدر نربط كل محتوى الموقع بقاعدة البيانات بدل تعديل ملفات HTML يدويًا.</p></div>
+</section>
+
+<section id="properties" class="view" style="display:none">
+<div class="panel"><div class="panel-head"><h2>إضافة عقار</h2></div>
+<form id="propertyForm"><div class="grid2">
+<div class="field"><label>نوع العرض</label><select name="purpose"><option value="sale">بيع</option><option value="rent">إيجار</option></select></div>
+<div class="field"><label>نوع العقار</label><select name="type"><option value="apartment">شقة</option><option value="villa">فيلا</option><option value="office">مكتب</option><option value="shop">محل</option><option value="chalet">شاليه</option><option value="land">أرض</option></select></div>
+<div class="field"><label>اسم العقار</label><input name="title" required></div>
+<div class="field"><label>الموقع المختصر</label><input name="location" placeholder="new-cairo / sheikh-zayed..." required></div>
+<div class="field"><label>اسم الموقع</label><input name="locationName" placeholder="التجمع الخامس - القاهرة الجديدة" required></div>
+<div class="field"><label>السعر</label><input name="price" type="number" required></div>
+<div class="field"><label>المساحة م²</label><input name="area" type="number"></div>
+<div class="field"><label>الغرف</label><input name="rooms" type="number"></div>
+<div class="field"><label>الحمامات</label><input name="bathrooms" type="number"></div>
+<div class="field"><label>الجراجات</label><input name="garages" type="number"></div>
+<div class="field"><label>الحالة</label><select name="status"><option value="active">متاح</option><option value="draft">مسودة</option><option value="sold">مباع</option><option value="rented">مؤجر</option></select></div>
+<div class="field"><label>الصورة الرئيسية</label><input id="propertyImage" type="file" accept="image/*"></div>
+</div><div class="field"><label>الوصف</label><textarea name="description"></textarea></div>
+<div class="field"><label>المميزات (افصل بينها بفاصلة)</label><input name="features" placeholder="تشطيب فاخر, جراج, أمن وحراسة"></div>
+<button class="btn primary full">إضافة العقار</button></form></div>
+<div class="panel"><div class="panel-head"><h2>العقارات الحالية</h2></div><div class="table-wrap"><table class="table"><thead><tr><th>صورة</th><th>العقار</th><th>العرض</th><th>السعر</th><th>الموقع</th><th></th></tr></thead><tbody id="propsBody"></tbody></table></div></div>
+</section>
+
+<section id="materials" class="view" style="display:none">
+<div class="panel"><div class="panel-head"><h2>إضافة مادة بناء</h2></div>
+<form id="materialForm"><div class="grid2">
+<div class="field"><label>اسم المنتج</label><input name="name" required></div><div class="field"><label>التصنيف</label><input name="category" placeholder="أسمنت / حديد / تشطيب..."></div>
+<div class="field"><label>السعر</label><input name="price" type="number" required></div><div class="field"><label>الوحدة</label><input name="unit" value="قطعة"></div>
+<div class="field"><label>الكمية</label><input name="stock" type="number" value="0"></div><div class="field"><label>الحالة</label><select name="status"><option value="active">متاح</option><option value="inactive">غير متاح</option></select></div>
+<div class="field"><label>الصورة</label><input id="materialImage" type="file" accept="image/*"></div></div>
+<div class="field"><label>الوصف</label><textarea name="description"></textarea></div><button class="btn primary full">إضافة المنتج</button></form></div>
+<div class="panel"><div class="panel-head"><h2>مواد البناء الحالية</h2></div><div class="table-wrap"><table class="table"><thead><tr><th>صورة</th><th>المنتج</th><th>التصنيف</th><th>السعر</th><th>الكمية</th><th></th></tr></thead><tbody id="matsBody"></tbody></table></div></div>
+</section>
+
+<section id="inquiries" class="view" style="display:none"><div class="panel"><div class="panel-head"><h2>طلبات العملاء</h2></div><div class="table-wrap"><table class="table"><thead><tr><th>الاسم</th><th>الهاتف</th><th>الطلب</th><th>الرسالة</th><th>الحالة</th></tr></thead><tbody id="inqBody"></tbody></table></div></div></section>
+</main></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script><script src="admin.js"></script>
+</body></html>
